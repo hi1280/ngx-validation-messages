@@ -1,0 +1,50 @@
+{
+  "name": "ngx-validation-messages",
+  "version": "0.0.2",
+  "description": "Validation messages used by form controls.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "npm run tsc",
+    "lint": "tslint src/**/*.ts",
+    "prepublish": "tsc",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hi1280/ngx-validation-messages"
+  },
+  "keywords": [
+    "angular",
+    "validation"
+  ],
+  "author": {
+    "name": "Hiroshi Oda",
+    "email": "hi12801280@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hi1280/ngx-validation-messages/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/language-service": "^4.2.4",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "codelyzer": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.3.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
