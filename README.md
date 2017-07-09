@@ -1,5 +1,8 @@
 # ngx-validation-messages
 
+[![Build Status](https://travis-ci.org/hi1280/ngx-validation-messages.svg?branch=master)](https://travis-ci.org/hi1280/ngx-validation-messages)
+[![npm version](https://badge.fury.io/js/ngx-validation-messages.svg)](https://badge.fury.io/js/ngx-validation-messages)
+
 ## Overview
 Validation messages used by form controls of Angular.
 
