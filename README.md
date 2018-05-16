@@ -21,11 +21,12 @@ $ npm install ngx-validation-messages --save
 
 ```typescript
 // app.module.ts
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { ValidationMessageModule } from "./validation-message/validation-message.module";
+import { ValidationMessageModule } from "ngx-validation-messages";
 
 @NgModule({
   declarations: [
@@ -33,10 +34,12 @@ import { ValidationMessageModule } from "./validation-message/validation-message
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ValidationMessageModule.configure({
       messages: {required: "{name} is required."}
     })
   ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -45,7 +48,7 @@ export class AppModule { }
 ```typescript
 // app.component.ts
 import { Component, AfterViewChecked, ViewChild } from "@angular/core";
-import { ValidationMessageService } from "ngx-validation-messages";
+import { ValidationMessageService, FormErrors } from "ngx-validation-messages";
 import { NgForm } from "@angular/forms";
 
 @Component({
@@ -59,7 +62,7 @@ export class AppComponent implements AfterViewChecked {
     }
   };
   value = "";
-  formErrors: {};
+  formErrors: FormErrors;
   form: NgForm;
   @ViewChild("form") currentForm: NgForm;
 
