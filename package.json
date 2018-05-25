@@ -1,6 +1,6 @@
 {
   "name": "ngx-validation-messages",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Validation messages used by form controls.",
   "main": "./dist/index.js",
   "scripts": {
@@ -28,17 +28,17 @@
     "url": "https://github.com/hi1280/ngx-validation-messages/issues"
   },
   "peerDependencies": {
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^5.0.0"
   },
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/language-service": "^4.2.4",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4",
@@ -59,7 +59,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "~2.0.3",
     "tslint": "~4.5.0",
-    "typescript": "~2.3.0",
+    "typescript": "~2.5.3",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "~3.1.2",
     "css-loader": "^0.28.0",
@@ -85,6 +85,6 @@
     "webpack-merge": "~4.1.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   }
 }
