@@ -26,7 +26,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
-import { ValidationMessageModule } from "ngx-validation-messages";
+import { NgxValidationMessagesModule } from "ngx-validation-messages";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { ValidationMessageModule } from "ngx-validation-messages";
   imports: [
     BrowserModule,
     FormsModule,
-    ValidationMessageModule.configure({
+    NgxValidationMessagesModule.configure({
       messages: {required: "{name} is required."}
     })
   ],
@@ -48,7 +48,7 @@ export class AppModule { }
 ```typescript
 // app.component.ts
 import { Component, AfterViewChecked, ViewChild } from "@angular/core";
-import { ValidationMessageService, FormErrors } from "ngx-validation-messages";
+import { NgxValidationMessagesService, FormErrors } from "ngx-validation-messages";
 import { NgForm } from "@angular/forms";
 
 @Component({
@@ -66,7 +66,7 @@ export class AppComponent implements AfterViewChecked {
   form: NgForm;
   @ViewChild("form") currentForm: NgForm;
 
-  constructor(private validator: ValidationMessageService) {}
+  constructor(private validator: NgxValidationMessagesService) {}
 
   ngAfterViewChecked() {
     this.formChanged();

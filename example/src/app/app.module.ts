@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
-import { ValidationMessageModule } from "ngx-validation-messages";
+import { NgxValidationMessagesModule } from "ngx-validation-messages";
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { ValidationMessageModule } from "ngx-validation-messages";
   imports: [
     BrowserModule,
     FormsModule,
-    ValidationMessageModule.configure({
+    NgxValidationMessagesModule.configure({
       messages: {required: "{name} is required."}
     })
   ],

@@ -1,21 +1,21 @@
 import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { ValidationMessageService } from "./src/validation-message.service";
+import { NgxValidationMessagesService } from "./src/ngx-validation-messages.service";
 import { MessagesConfiguration } from "./src/messages-configuration";
 
-export * from "./src/validation-message.service";
+export * from "./src/ngx-validation-messages.service";
 export * from "./src/validation-messages";
 export * from "./src/messages-configuration";
 
 @NgModule({
   imports: [CommonModule],
-  providers: [ValidationMessageService, MessagesConfiguration]
+  providers: [NgxValidationMessagesService, MessagesConfiguration]
 })
-export class ValidationMessageModule {
+export class NgxValidationMessagesModule {
   static configure(config: MessagesConfiguration): ModuleWithProviders {
     return {
-      ngModule: ValidationMessageModule,
+      ngModule: NgxValidationMessagesModule,
       providers: [{
         provide: MessagesConfiguration,
         useValue: config

@@ -1,11 +1,11 @@
 import { NgForm, NgModel } from "@angular/forms";
 import { TestBed } from "@angular/core/testing";
 
-import { ValidationMessageService } from "./validation-message.service";
-import { ValidationMessageModule } from "../index";
+import { NgxValidationMessagesService } from "./ngx-validation-messages.service";
+import { NgxValidationMessagesModule } from "../index";
 
 describe("ValidationMessageService", () => {
-  let service: ValidationMessageService;
+  let service: NgxValidationMessagesService;
   let ngForm: any;
 
   describe("is messages config", () => {
@@ -16,11 +16,11 @@ describe("ValidationMessageService", () => {
         }
       };
       TestBed.configureTestingModule({
-        imports: [ValidationMessageModule.configure({
+        imports: [NgxValidationMessagesModule.configure({
           messages: {appForbiddenName: "Someone named \"{forbiddenName}\" cannot be a hero."}
         })]
       });
-      service = TestBed.get(ValidationMessageService);
+      service = TestBed.get(NgxValidationMessagesService);
     });
     it("validate method to required", () => {
       const messageArgs = {
@@ -107,9 +107,9 @@ describe("ValidationMessageService", () => {
         }
       };
       TestBed.configureTestingModule({
-        imports: [ValidationMessageModule]
+        imports: [NgxValidationMessagesModule]
       });
-      service = TestBed.get(ValidationMessageService);
+      service = TestBed.get(NgxValidationMessagesService);
     });
     it("validate method to required", () => {
       const messageArgs = {

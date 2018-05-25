@@ -18,7 +18,7 @@ export interface FormErrors {
  * Validation messages used by form controls.
  */
 @Injectable()
-export class ValidationMessageService {
+export class NgxValidationMessagesService {
   messages: { [key: string]: string };
   formErrors: FormErrors;
 

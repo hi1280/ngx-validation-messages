@@ -1,5 +1,5 @@
 import { Component, AfterViewChecked, ViewChild } from "@angular/core";
-import { ValidationMessageService, FormErrors } from "ngx-validation-messages";
+import { NgxValidationMessagesService, FormErrors } from "ngx-validation-messages";
 import { NgForm } from "@angular/forms";
 
 @Component({
@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewChecked {
   form: NgForm;
   @ViewChild("form") currentForm: NgForm;
 
-  constructor(private validator: ValidationMessageService) {}
+  constructor(private validator: NgxValidationMessagesService) {}
 
   ngAfterViewChecked() {
     this.formChanged();

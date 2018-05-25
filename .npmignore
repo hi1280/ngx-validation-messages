@@ -10,6 +10,7 @@ npm-debug.log
 *.launch
 .settings/
 *.sublime-workspace
+.editorconfig
 
 # IDE - VSCode
 .vscode/*
@@ -21,3 +22,11 @@ npm-debug.log
 # OS generated files
 Thumbs.db
 .DS_Store
+
+# misc
+*.ts
+!*.d.ts
+example
+coverage
+tsconfig.json
+config
