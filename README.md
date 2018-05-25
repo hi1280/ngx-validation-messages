@@ -17,6 +17,14 @@ To install this library, run:
 ```bash
 $ npm install ngx-validation-messages --save
 ```
+
+Choose the version corresponding to your Angular version:
+
+ Angular     | version
+ ----------- | ------------------- 
+ 5           | 1.x          
+ 4           | 0.x          
+
 ## Usage
 
 ```typescript
