@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" required formControlName="name">
+      <div *ngIf="formErrors && formErrors.name.length > 0">
+        <span *ngFor="let e of formErrors.name">
+          {{ e }}
+        </span>
+      </div>
+    </div>
+    <div>
+      <label for="name">Address</label>
+      <input type="text" required minlength="4" formControlName="address">
+      <div *ngIf="formErrors && formErrors.address.length > 0">
+        <span *ngFor="let e of formErrors.address">
+          {{ e }}
+        </span>
+      </div>
+    </div>
+  </div>
+</form>

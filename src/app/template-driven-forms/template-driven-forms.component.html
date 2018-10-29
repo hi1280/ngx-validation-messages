@@ -1,0 +1,20 @@
+<form #form="ngForm">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" required name="name" [(ngModel)]="name">
+    <div *ngIf="formErrors && formErrors.name.length > 0">
+      <span *ngFor="let e of formErrors.name">
+        {{ e }}
+      </span>
+    </div>
+  </div>
+  <div>
+    <label for="name">Address</label>
+    <input type="text" id="address" required minlength="4" name="address" [(ngModel)]="address">
+    <div *ngIf="formErrors && formErrors.address.length > 0">
+      <span *ngFor="let e of formErrors.address">
+        {{ e }}
+      </span>
+    </div>
+  </div>
+</form>
