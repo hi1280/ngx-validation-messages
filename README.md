@@ -28,78 +28,13 @@ Choose the version corresponding to your Angular version:
 
 ## Usage
 
-```typescript
-// app.module.ts
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+[Usage for Reactive Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/reactive-forms)  
+[Usage for Template-driven Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/template-driven-forms)  
 
-import { AppComponent } from "./app.component";
-import { NgxValidationMessagesModule } from "ngx-validation-messages";
+'interpolate' method of NgxValidationMessagesService that return Array of validation message for each form
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    NgxValidationMessagesModule.configure({
-      messages: {required: "{name} is required."}
-    })
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
+**Example**  
 
-```typescript
-// app.component.ts
-import { Component, AfterViewChecked, ViewChild } from "@angular/core";
-import { NgxValidationMessagesService, FormErrors } from "ngx-validation-messages";
-import { NgForm } from "@angular/forms";
-
-@Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html"
-})
-export class AppComponent implements AfterViewChecked {
-  config = {
-    "name": {
-      required: { name: "Name" }
-    }
-  };
-  value = "";
-  formErrors: FormErrors;
-  form: NgForm;
-  @ViewChild("form") currentForm: NgForm;
-
-  constructor(private validator: NgxValidationMessagesService) {}
-
-  ngAfterViewChecked() {
-    this.formChanged();
-  }
-
-  formChanged() {
-    if(this.currentForm === this.form) { return; }
-    this.form = this.currentForm;
-    if(this.form && this.form.valueChanges) {
-      this.form.valueChanges
-        .subscribe(data => this.onValueChanged(data));
-    }
-  }
-
-  onValueChanged(data?: any) {
-    if(!this.form) { return; }
-    this.formErrors = this.validator.interpolate(this.form, this.config);
-  }
-
-}
-```
-'interpolate' method that return Array of validation message for each form
-
-**Example**
 ```js
 {
   "name":["name is required","name must be at least 5."],
