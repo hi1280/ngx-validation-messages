@@ -22,7 +22,7 @@ Choose the version corresponding to your Angular version:
 
  Angular     | version
  ----------- | ------------------- 
- 6,7         | 2.x
+ 6,7,8       | 2.x
  5           | 1.x          
  4           | 0.x          
 
