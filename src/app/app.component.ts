@@ -21,7 +21,7 @@ export class AppComponent implements AfterViewChecked {
   address = '';
   formErrors: FormErrors;
   form: NgForm;
-  @ViewChild('form') currentForm: NgForm;
+  @ViewChild('form', {static: true}) currentForm: NgForm;
 
   constructor(private validator: NgxValidationMessagesService) {}
 
