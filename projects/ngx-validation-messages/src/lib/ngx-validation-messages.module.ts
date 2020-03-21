@@ -6,7 +6,7 @@ import { NgxValidationMessagesService} from './ngx-validation-messages.service';
   providers: [NgxValidationMessagesService]
 })
 export class NgxValidationMessagesModule {
-  static configure(config: MessagesConfiguration): ModuleWithProviders {
+  static configure(config: MessagesConfiguration): ModuleWithProviders<NgxValidationMessagesModule> {
     return {
       ngModule: NgxValidationMessagesModule,
       providers: [{

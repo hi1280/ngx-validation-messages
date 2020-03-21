@@ -20,7 +20,7 @@ describe('NgxValidationMessagesService', () => {
           messages: {appForbiddenName: 'Someone named "{forbiddenName}" cannot be a hero.'}
         })]
       });
-      service = TestBed.get(NgxValidationMessagesService);
+      service = TestBed.inject(NgxValidationMessagesService);
     });
     it('validate method to required', () => {
       const messageArgs = {
@@ -109,7 +109,7 @@ describe('NgxValidationMessagesService', () => {
       TestBed.configureTestingModule({
         imports: [NgxValidationMessagesModule]
       });
-      service = TestBed.get(NgxValidationMessagesService);
+      service = TestBed.inject(NgxValidationMessagesService);
     });
     it('validate method to required', () => {
       const messageArgs = {

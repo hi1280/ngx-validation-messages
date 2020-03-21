@@ -1,6 +1,6 @@
 {
   "name": "ngx-validation-messages",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Validation messages used by form controls.",  
   "peerDependencies": {
     "@angular/common": ">=6.0.0",

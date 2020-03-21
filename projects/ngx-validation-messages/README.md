@@ -22,14 +22,32 @@ Choose the version corresponding to your Angular version:
 
  Angular     | version
  ----------- | ------------------- 
- 6,7,8       | 2.x
+ 6,7,8,9     | 2.x
  5           | 1.x          
  4           | 0.x          
 
 ## Usage
 
-[Usage for Reactive Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/reactive-forms)  
-[Usage for Template-driven Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/template-driven-forms)  
+1. [import and configure for NgxValidationMessagesModule](https://github.com/hi1280/ngx-validation-messages/blob/master/src/app/app.module.ts)  
+
+e.g.
+```typescript
+@NgModule({
+  ...
+  imports: [
+    NgxValidationMessagesModule.configure({
+      messages: {
+        required: '{name} is required.',
+        minlength: '{name} must be at least {min} characters long.'
+      }
+    })
+  ],
+  ...
+})
+```
+2. Form  
+    1. [Usage for Reactive Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/reactive-forms)  
+    1. [Usage for Template-driven Forms](https://github.com/hi1280/ngx-validation-messages/tree/master/src/app/template-driven-forms)  
 
 'interpolate' method of NgxValidationMessagesService that return Array of validation message for each form
 
